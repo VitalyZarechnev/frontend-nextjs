@@ -1,0 +1,121 @@
+@use '@assets/mixins/hover' as *;
+
+.text_field {
+  &__label {
+    padding-left: 10px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &_hidden {
+      opacity: 0;
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 14px;
+    background: var(--bg-message-input);
+    transition: border-color 0.2s;
+    border: 1px solid var(--bg-message-input);
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    color: var(--text-label-primary);
+
+    @include hover() {
+      border: 1px solid var(--divider-primary);
+    }
+
+    &:active,
+    &:focus {
+      border: 1px solid var(--divider-primary);
+    }
+
+    &::placeholder {
+      color: var(--text-disable);
+    }
+
+    &:disabled {
+      background-color: var(--but-disable);
+      color: var(--text-disable);
+    }
+
+    &_variant_beige {
+      background: var(--bg-main);
+      border: 1px solid var(--bg-main);
+    }
+
+    &_clearable {
+      padding-right: 36px;
+    }
+
+    &_error {
+      border: 1px solid var(--but-error);
+
+      @include hover() {
+        border: 1px solid var(--but-error);
+      }
+
+      &:active,
+      &:focus {
+        border: 1px solid var(--but-error);
+      }
+    }
+  }
+
+  &__input_size_large {
+    padding-left: 16px;
+    height: 56px;
+
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__clear {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    color: var(--icon-secondary);
+
+    &:disabled {
+      color: var(--icon-disable);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__password_toggle {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    color: var(--icon-secondary);
+
+    &:disabled {
+      color: var(--icon-disable);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__error {
+    margin: 4px 10px;
+    color: var(--but-error);
+  }
+}

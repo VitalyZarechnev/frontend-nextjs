@@ -1,0 +1,28 @@
+@use '@assets/styles/breakpoints' as *;
+
+.heading {
+  font-weight: 500;
+
+  &__h1 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__h2 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.24px;
+  }
+
+  &__h3 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+  }
+}

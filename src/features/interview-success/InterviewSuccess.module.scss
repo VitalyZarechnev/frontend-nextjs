@@ -1,0 +1,153 @@
+.success_screen {
+  --screen-bg: #07101f;
+  --screen-divider: #1f2937;
+  --screen-accent: #0ea5e9;
+  --screen-accent-soft: rgba(14, 165, 233, 0.1);
+  --screen-text-primary: #ffffff;
+  --screen-text-muted: #9ca3af;
+  --screen-text-on-accent: #080b12;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--screen-bg);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    // Figma draws the header's 1px stroke inside its 56px height, so the bottom padding absorbs it.
+    padding: 16px 32px 15px;
+
+    border-bottom: 1px solid var(--screen-divider);
+  }
+
+  &__logo_group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__logo_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    border-radius: 4px;
+    background: var(--screen-accent);
+  }
+
+  &__logo_glyph {
+    width: 16px;
+    height: 16px;
+    color: var(--screen-text-on-accent);
+  }
+
+  &__logo_text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--screen-text-muted);
+  }
+
+  &__user_actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &__user_name {
+    color: var(--screen-text-primary);
+  }
+
+  &__logout {
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--screen-text-muted);
+  }
+
+  &__main {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 60px 0 120px;
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    width: 800px;
+  }
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+
+    border: 2px solid var(--screen-accent);
+    border-radius: 1000px;
+    background: var(--screen-accent-soft);
+  }
+
+  &__check {
+    width: 56px;
+    height: 56px;
+    color: var(--screen-accent);
+  }
+
+  &__text_stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__title {
+    width: 100%;
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    color: var(--screen-text-primary);
+  }
+
+  &__action_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding: 0 24px;
+
+    border-radius: 100px;
+    background: var(--screen-accent);
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--screen-text-on-accent);
+  }
+}

@@ -1,0 +1,22 @@
+schema: spec-driven
+
+context: |
+  Full project conventions live in AGENTS.md, with topic-specific detail in docs/agents/.
+
+rules:
+  proposal:
+    - Follow AGENTS.md's architecture overview when scoping affected layers.
+  design:
+    - Follow docs/agents/architecture.md and docs/agents/data-fetching.md for layering and server-state decisions.
+  tasks:
+    - Follow docs/agents/testing.md when defining test tasks.
+
+operations:
+  apply:
+    guidance:
+      - For every file touched, follow AGENTS.md's "touching X, read Y" table to find the relevant docs/agents/ file(s).
+      - Always follow docs/agents/code-style.md regardless of which files are touched.
+      - Run the checks listed in AGENTS.md's Quick Commands before finishing.
+  archive:
+    guidance:
+      - Summarize spec changes at the requirement level (ADDED/MODIFIED/REMOVED), per AGENTS.md conventions.

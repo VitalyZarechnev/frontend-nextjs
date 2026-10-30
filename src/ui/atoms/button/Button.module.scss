@@ -1,0 +1,136 @@
+@use '@assets/mixins/hover' as *;
+
+.button {
+  padding: 6px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.2s background-color;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.14px;
+  color: var(--text-label-primary);
+
+  > span {
+    color: inherit;
+    transition: 0.2s color;
+  }
+
+  > svg {
+    width: 24px;
+    height: 24px;
+    transition: 0.2s color;
+  }
+
+  &_spinner > svg {
+    color: var(--icon-secondary);
+  }
+
+  &:disabled {
+    background: var(--but-disable);
+    cursor: default;
+    color: var(--text-disable);
+
+    svg {
+      color: var(--icon-disable);
+    }
+
+    @include hover() {
+      background: var(--but-disable);
+    }
+  }
+
+  &_variant_core {
+    background: var(--core-primary);
+    color: var(--text-label-primary-dark);
+
+    @include hover() {
+      background: var(--core-primary-hover);
+    }
+  }
+
+  &_variant_main {
+    background: var(--but-primary);
+    color: var(--text-label-inverted);
+
+    svg {
+      color: var(--icon-primary-light);
+    }
+
+    @include hover() {
+      background: var(--but-primary-hover);
+    }
+  }
+
+  &_variant_secondary {
+    background: var(--but-secondary);
+    color: var(--text-label-primary-dark);
+
+    svg {
+      color: var(--icon-primary-dark);
+    }
+
+    @include hover() {
+      background: var(--but-secondary-hover);
+    }
+  }
+
+  &_variant_no-bg {
+    @include hover() {
+      background: var(--but-primary);
+
+      &:disabled {
+        background: none;
+      }
+    }
+
+    &:active {
+      background: transparent;
+      color: var(--text-disable);
+
+      svg {
+        color: var(--icon-disable);
+      }
+    }
+
+    &:disabled {
+      background: none;
+    }
+  }
+
+  &_variant_outlined {
+    border: 1px solid var(--divider-secondary);
+    height: 34px;
+
+    @include hover() {
+      background: var(--but-primary);
+
+      &:disabled {
+        background: none;
+      }
+    }
+
+    &:disabled {
+      background: none;
+    }
+  }
+
+  &_size_small {
+    height: 30px;
+    min-height: 30px;
+    padding: 0 8px;
+    border-radius: 10px;
+    gap: 4px;
+
+    font-size: 12px;
+    letter-spacing: -0.12px;
+  }
+}

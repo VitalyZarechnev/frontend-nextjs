@@ -1,0 +1,11 @@
+/*
+  Wraps hover styles so they are only applied on devices that support a true mouse hover.
+  @content The hover styles to be applied.
+ */
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

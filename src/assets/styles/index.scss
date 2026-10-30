@@ -1,0 +1,33 @@
+@use './colors' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+
+  @include base-palette();
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: var(--bg-secondary);
+  color: var(--text-label-primary);
+}
+
+input,
+textarea,
+button {
+  font-family: var(--font-inter), sans-serif;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--text-label-primary);
+}

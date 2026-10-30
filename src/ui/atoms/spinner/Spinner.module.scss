@@ -1,0 +1,24 @@
+.spinner_container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner_svg {
+  transition: transform 0.2s ease;
+  color: var(--core-primary);
+
+  &__color_invert {
+    color: var(--icon-invert);
+  }
+
+  &.spinning {
+    animation: rotate 1s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

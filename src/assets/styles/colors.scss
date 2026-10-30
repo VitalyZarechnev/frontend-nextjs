@@ -1,0 +1,57 @@
+@mixin base-palette() {
+  --core-primary: #ffc800;
+  --core-primary-hover: #ffb700;
+  --core-primary-link: #1086f9;
+  --core-primary-link-hover: #349bff;
+  --core-logo-white: #ffffff;
+  --core-logo-black: #00ff37;
+
+  --bg-surface: #222731;
+  --bg-surface-secondary: #181c23;
+  --bg-message-input: #1e232b;
+  --bg-primary: #222731;
+  --bg-secondary: #181c23;
+  --bg-scrim: #14181e;
+  --bg-scrim-alpha: #54617c;
+  --bg-shadow: #171a23;
+  --bg-translucent-alpha: #242a36;
+  --bg-hover: #2c323e;
+  --bg-scrim-alpha-primary: #181c23;
+  --bg-scrim-alpha-secondary: #181c23;
+  --bg-selection: #303849;
+  --bg-modal: #222731;
+  --bg-dropdown: #262c38;
+  --bg-dropdown-alpha: #262c38;
+
+  --text-label-primary: #ffffff;
+  --text-label-secondary: #a5aec0;
+  --text-disable: #838c9e;
+  --text-label-inverted: #ffffff;
+  --text-selection: #a5aec0;
+  --text-label-primary-light: #ffffff;
+  --text-label-primary-dark: #181c23;
+
+  --but-primary: #333a47;
+  --but-primary-hover: #41495b;
+  --but-secondary: #ffffff;
+  --but-secondary-hover: #d6dcea;
+  --but-error: #fa3939;
+  --but-error-hover: #ff4343;
+  --but-disable: #2a303c;
+  --but-secondary-alt: #ffffff;
+  --but-secondary-alt-hover: #ffffff;
+
+  --icon-primary: #ffffff;
+  --icon-secondary: #a5aec0;
+  --icon-hover: #d2d7df;
+  --icon-disable: #5a657a;
+  --icon-invert: #0c1017;
+  --icon-primary-light: #ffffff;
+  --icon-primary-dark: #181c23;
+
+  --divider-primary: #3c4351;
+  --divider-secondary: #54617c;
+  --divider-secondary-more: #757f95;
+  --divider-primary-dark: #181c23;
+  --divider-primary-light: #ffffff;
+}

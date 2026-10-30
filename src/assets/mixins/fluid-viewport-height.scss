@@ -1,0 +1,26 @@
+/**
+  Sets a fluid viewport height utilizing modern dynamic viewport units (dvh)
+  with a fallback for older browsers, allowing for an optional offset.
+
+  Some older browsers that do not support dvh,
+  interpret it as vh (which is acceptable),
+  while others interpret it as %.
+
+  So, if dvh is not supported, we need to explicitly use vh.
+
+  @param {String} $property [height] - The CSS property to target (e.g., height, min-height).
+  @param {Length} $offset [0] - An optional value to subtract from the total height (e.g., a header's height).
+ */
+@mixin fluid-viewport-height($property: height, $offset: 0) {
+  @if $offset == 0 {
+    #{$property}: 100vh;
+    @supports (height: 100dvh) {
+      #{$property}: 100dvh;
+    }
+  } @else {
+    #{$property}: calc(100vh - #{$offset});
+    @supports (height: 100dvh) {
+      #{$property}: calc(100dvh - #{$offset});
+    }
+  }
+}

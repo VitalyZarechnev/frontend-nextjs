@@ -1,0 +1,17 @@
+@use '@assets/styles/breakpoints' as *;
+
+.message {
+  font-size: 15xp;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+
+  &__weight_medium {
+    font-weight: 500;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

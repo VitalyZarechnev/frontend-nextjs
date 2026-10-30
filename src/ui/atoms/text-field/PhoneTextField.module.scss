@@ -1,0 +1,14 @@
+.prefix {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.18px;
+}
+
+.input_inner {
+  padding-left: 16px + 22px;
+}

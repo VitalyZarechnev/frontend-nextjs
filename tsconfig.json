@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "lib": ["dom", "dom.iterable", "esnext", "es2023"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@app/*": ["./app/*"],
+      "@application/*": ["./src/application/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@data/*": ["./src/data/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@errors/*": ["./src/errors/*"],
+      "@features/*": ["./src/features/*"],
+      "@pixel-perfect/*": ["./pixel-perfect/*"],
+      "@ui/*": ["./src/ui/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@views/*": ["./src/views/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/*.ts", ".next/dev/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

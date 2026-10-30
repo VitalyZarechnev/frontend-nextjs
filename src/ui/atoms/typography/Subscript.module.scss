@@ -1,0 +1,10 @@
+.subscript {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: -0.13px;
+
+  &__weight_medium {
+    font-weight: 500;
+  }
+}

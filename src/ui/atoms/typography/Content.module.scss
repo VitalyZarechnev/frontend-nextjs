@@ -1,0 +1,22 @@
+@use '@assets/styles/breakpoints' as *;
+
+.content {
+  font-weight: 400;
+
+  &__size_normal {
+    font-size: 18xp;
+    line-height: 26px;
+    letter-spacing: -0.18px;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__size_mini {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+}
