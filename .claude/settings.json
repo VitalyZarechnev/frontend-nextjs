@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm run prettier && npm run eslint && npm run tsc && npm run test",
+            "timeout": 180,
+            "statusMessage": "Running prettier, eslint --fix, tsc, and tests..."
+          }
+        ]
+      }
+    ]
+  }
+}

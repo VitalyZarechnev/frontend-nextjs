@@ -1,0 +1,30 @@
+echo "🛡️  Running pre-commit hooks..."
+
+CURRENT_BRANCH=$(git branch --show-current)
+PROTECTED_BRANCHES="^(master|main|dev)$"
+
+if echo "$CURRENT_BRANCH" | grep -Eq "$PROTECTED_BRANCHES"; then
+  echo "🚫 ERROR: Direct commits to the '$CURRENT_BRANCH' branch are forbidden!"
+  echo "Please create a feature branch and submit a Pull Request."
+  exit 1
+fi
+
+echo "💅 Running Prettier checks..."
+npm run prettier:check || {
+  echo "❌ Prettier validation failed. Run 'npm run prettier' to automatically fix formatting."
+  exit 1
+}
+
+echo "🧹 Running ESLint checks..."
+npm run eslint:check || {
+  echo "❌ ESLint validation failed. Run 'npm run eslint' to automatically fix errors."
+  exit 1
+}
+
+echo "🔎 Running TypeScript checks..."
+npm run tsc || {
+  echo "❌ TypeScript validation failed. Please fix type errors before committing."
+  exit 1
+}
+
+echo "✅ All checks passed! Committing..."
